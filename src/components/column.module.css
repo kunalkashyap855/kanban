@@ -1,0 +1,14 @@
+.column {
+    min-width: 22%;
+    display: flex;
+    flex-direction: column;
+}
+
+.column__title {
+    font-weight: 600;
+}
+
+.column__cardArea {
+    flex-grow: 1;
+    padding: 10px;
+}
