@@ -1,0 +1,9 @@
+.board {
+    width: 90%;
+    height: 65vh;
+    /* background-color: darkgray; */
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}

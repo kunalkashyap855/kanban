@@ -1,0 +1,23 @@
+.nav {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 1%;
+}
+
+.nav__brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav__brand__logo {
+    width: 117.375px;
+    height: 88.125px;
+}
+
+.nav__brand__name {
+    letter-spacing: 0.075em;
+}
+
