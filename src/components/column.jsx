@@ -18,7 +18,7 @@ function Column({ id, title, list }) {
                         ref={provided.innerRef}
                         style={{ backgroundColor: snapshot.isDraggingOver ? 'rgba(255, 69, 0, 0.1)' : 'white' }}
                         {...provided.droppableProps}>
-                            {list.map((item, index) => <Card key={item.id} item={item} index={index} />)}
+                            {list.map((item, index) => <Card key={item.id} item={item.content} index={index} />)}
                     </div>
                 )}
             </Droppable>
