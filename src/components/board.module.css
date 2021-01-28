@@ -1,9 +1,24 @@
 .board {
-    width: 90%;
+    width: 80%;
     height: 65vh;
-    /* background-color: darkgray; */
     margin: auto;
     margin-top: 2%;
     display: flex;
     justify-content: space-evenly;
+}
+
+.overallContainer {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.sidebar {
+    width: 20%;
+    height: 85vh;
+    margin-top: 2%;
+    margin-right: 2rem;
+    padding-right: 2rem;
+    border-right: 1px solid rgb(220, 222, 224);
+
 }
