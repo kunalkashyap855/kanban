@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-left: 0;
+    padding: 0rem 1.5rem;
+}
+
+.btn {
+    background-color: #696be7;
+    color: white;
+    border-radius: .5rem;
+    border: none;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.btn:hover {
+    background-color: #5759e0;
+    cursor: pointer;
+}
+
+.textarea {
+    border-radius: 10px;
+    border: solid 1px rgb(197, 197, 197);
+    font-family: 'montserrat', sans-serif;
+    padding: 1rem;
+    height: 4rem;
+    width: 100%;
+    background-color: white;
+    font-weight: 500;
+    resize: none;
+}
+
+.textarea:focus{
+    outline: none;
+    box-shadow: 0 0 5px #c9e5ff;
+    border: solid 1px #c9e5ff;
+}
