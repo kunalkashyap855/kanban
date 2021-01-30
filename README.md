@@ -35,6 +35,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+
 ## How to contribute
 
 If you like this project and would like to contribute to it, checkout our [Issues](https://github.com/kunalkashyap855/kanban/issues) page. If you find an issue that interests you or you think you will be able to resolve the issue, comment in it requesting to work on it.
@@ -53,3 +54,8 @@ After you've setup, make changes to the code with respect to resolving the issue
 `git push -u origin <your_branch_name>`
 
 After reviewing your pull request, if it resolves the issue, your code will be merged with the main branch and the issue will be closed.
+
+
+## ✍️ Author <a name = "author"></a>
+
+-   [@kunalkashyap855](https://github.com/kunalkashyap855/)
