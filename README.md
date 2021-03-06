@@ -56,6 +56,11 @@ After you've setup, make changes to the code with respect to resolving the issue
 After reviewing your pull request, if it resolves the issue, your code will be merged with the main branch and the issue will be closed.
 
 
-## ✍️ Author <a name = "author"></a>
+## Project Maintainer 
 
--   [@kunalkashyap855](https://github.com/kunalkashyap855/)
+<table>
+  <tbody><tr>
+    <td align="center"><a href="https://github.com/kunalkashyap855"><img alt="" src="https://avatars.githubusercontent.com/u/34695022?s=400&u=645b27476d11989345fc02b9ec7a99ec4cb40a30&v=4" width="130px;"><br><sub><b>
+ Kunal Kashyap </b></sub></a><br><a href="" title="Code">💻 </a></td></a></td>
+  </tr>
+</tbody></table>
