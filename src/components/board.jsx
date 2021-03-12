@@ -76,6 +76,22 @@ function Board() {
     setColumns(updatedColumnFromChild);
   };
 
+  const setEditedBoard = (columnKey,editedList) => {
+   const newEditedColumns = {
+    ...columns,
+    [Object.keys(columns).filter(
+      (key) => key === columnKey
+    )]: {
+      name: columns[Object.keys(columns).filter(
+        (key) => key === columnKey
+      )].name,
+      items: editedList
+    }
+
+  }
+console.log("Edited Column: ",newEditedColumns,"column",columns);
+  setColumns(newEditedColumns);
+}
   return (
     <>
       <DragDropContext
@@ -88,6 +104,7 @@ function Board() {
               id={columnId}
               title={col.name}
               list={col.items}
+              setEditedBoard= {setEditedBoard}
             />
           ))}
         </div>
@@ -106,5 +123,6 @@ function Board() {
     </>
   );
 }
+
 
 export default Board;
