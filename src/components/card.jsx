@@ -6,6 +6,7 @@ import IconButton from "@material-ui/core/IconButton";
 import EditIcon from "@material-ui/icons/Edit";
 import Modal from "@material-ui/core/Modal";
 import { FormControl } from '@material-ui/core';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 // const useStyles = makeStyles((theme) => ({
 //     margin: {
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Card({ item, index,setEdited,columnCode }) {
+function Card({ item, index,setEdited,columnCode, delFunc }) {
   const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [editButtonShow, setEditButtonShow] = useState(false);
@@ -69,6 +70,10 @@ function Card({ item, index,setEdited,columnCode }) {
     handleOpen();
   };
 
+  const deleteButtonClicked = (e, id) => {
+    console.log("Delete button clicked")
+    delFunc(id,columnCode);
+  };
   const handleInput = (e) => {
     setEditedItem({
         id: item.id,
@@ -136,12 +141,20 @@ function Card({ item, index,setEdited,columnCode }) {
           >
             {item.content}
             {editButtonShow ? (
+              <>
               <IconButton
-                aria-label="delete"
+                aria-label="edit"
                 onClick={(e) => editButtonClicked(e, item.id)}
               >
                 <EditIcon fontSize="small" />
               </IconButton>
+              <IconButton
+              aria-label="delete"
+              onClick={(e) => deleteButtonClicked(e, item.id)}
+            >
+              <DeleteForeverIcon fontSize="small" />
+            </IconButton>
+            </>
             ) : null}
           </div>
           <Modal
