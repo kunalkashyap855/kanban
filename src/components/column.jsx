@@ -6,7 +6,7 @@ import Card from './card';
 
 import styles from './column.module.css';
 
-function Column({ id, title, list,setEditedBoard }) {
+function Column({ id, title, list,setEditedBoard,deleteFunction }) {
     const setEdited = (editedItem,columnKey) => {
         var index;
          list.findIndex(function (entry, i) { 
@@ -18,6 +18,20 @@ function Column({ id, title, list,setEditedBoard }) {
     var editedList = list;
     editedList[index] = editedItem;
    setEditedBoard(columnKey,editedList)
+    
+}
+
+const delFunc = (itemId,columnId) => {
+    // console.log("Item Id: ",itemId,"Column Id: ",columnId);
+    var index;
+    list.findIndex(function (entry, i) { 
+        if (entry.id == itemId) { 
+            index = i; 
+            return true; 
+        } 
+    });
+    list.splice(index,1);
+    deleteFunction(list,columnId);
     
 }
 
@@ -33,7 +47,7 @@ function Column({ id, title, list,setEditedBoard }) {
                         ref={provided.innerRef}
                         style={{ backgroundColor: snapshot.isDraggingOver ? 'rgba(255, 69, 0, 0.1)' : 'white' }}
                         {...provided.droppableProps}>
-                            {list.map((item, index) => <Card setEdited={setEdited} columnCode={id} key={item.id} item={item} index={index} />)}
+                            {list.map((item, index) => <Card delFunc={delFunc} setEdited={setEdited} columnCode={id} key={item.id} item={item} index={index} />)}
                     </div>
                 )}
             </Droppable>

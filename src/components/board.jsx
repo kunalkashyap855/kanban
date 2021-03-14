@@ -92,6 +92,23 @@ function Board() {
 console.log("Edited Column: ",newEditedColumns,"column",columns);
   setColumns(newEditedColumns);
 }
+
+const deleteFunction = (updatedList,colId) => {
+  const newEditedColumns = {
+    ...columns,
+    [Object.keys(columns).filter(
+      (key) => key === colId
+    )]: {
+      name: columns[Object.keys(columns).filter(
+        (key) => key === colId
+      )].name,
+      items: updatedList
+    }
+
+  }
+  setColumns(newEditedColumns);
+
+}
   return (
     <>
       <DragDropContext
@@ -105,6 +122,7 @@ console.log("Edited Column: ",newEditedColumns,"column",columns);
               title={col.name}
               list={col.items}
               setEditedBoard= {setEditedBoard}
+              deleteFunction = {deleteFunction}
             />
           ))}
         </div>
