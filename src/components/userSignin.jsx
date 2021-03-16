@@ -35,7 +35,17 @@ class userSignin extends Component {
   submitSignin = (e) => {
       e.preventDefault();
 
-   alert("Signin successfull")
+      axios.post('http://localhost:5000/user/Signin',{
+        email:  this.state.email,
+        password: this.state.password
+      })
+      .then((res) => {
+        console.log(res);
+       alert(res.data.message);
+      
+      }).catch((err) => {
+        console.log(err);
+      })
   };
 
   render() {
