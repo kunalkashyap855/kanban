@@ -47,7 +47,17 @@ class userSignup extends Component {
         return;
     }
 
-   alert("Signup successfull")
+    axios.post('http://localhost:5000/user/Signup',{
+      email:  this.state.email,
+      password: this.state.password
+    })
+    .then((res) => {
+      console.log(res);
+     alert(res.data.message);
+    
+    }).catch((err) => {
+      console.log(err);
+    })
   };
 
   render() {
