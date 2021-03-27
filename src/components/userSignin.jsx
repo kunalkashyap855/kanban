@@ -40,7 +40,7 @@ class userSignin extends Component {
         password: this.state.password
       })
       .then((res) => {
-        console.log(res);
+        console.log("Task Columns after signin", res.data.data[0].taskColumns);
        alert(res.data.message);
       
       }).catch((err) => {
@@ -53,7 +53,7 @@ class userSignin extends Component {
       <>
       <Header />
          
-                  <Card style={{ width: "40vw", marginLeft: "auto", marginRight: "auto", marginTop:'4vh'}}>
+          <Card style={{ width: "40vw", marginLeft: "auto", marginRight: "auto", marginTop:'4vh'}}>
           <Card.Header
             style={{
               backgroundColor: "#6c6c6c",

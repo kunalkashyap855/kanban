@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import { v4 as uuidv4 } from "uuid";
 import AddItem from "./addItem";
+import axios from 'axios';
 
 // components
 import Column from "./column";
@@ -9,6 +10,7 @@ import Column from "./column";
 import styles from "./board.module.css";
 
 function Board() {
+  
   const [notStartedList, setNotStartedList] = useState([
     { id: uuidv4(), content: "This is a draggable card" },
     { id: uuidv4(), content: "This is another draggable card" },

@@ -39,6 +39,23 @@ router.post("/Signup", (req, res) => {
               const newUser = new User({
                 email,
                 password: hashedPassword,
+                taskColumns: [{
+                  name: "Not Started",
+                  items: [],
+                },
+                {
+                  name: "In Progress",
+                  items: [],
+                },
+                {
+                  name: "In Review",
+                  items: [],
+                },
+                {
+                  name: "Completed",
+                  items: [],
+                },
+              ]
               });
 
               newUser
@@ -90,6 +107,7 @@ router.post("/Signin", (req, res) => {
     // Check if user exist
     User.find({ email })
       .then((data) => {
+        console.log("user data:",data[0].taskColumns)
         if (data.length) {
           // User exists
 
@@ -99,6 +117,7 @@ router.post("/Signin", (req, res) => {
             .then((result) => {
               if (result) {
                 // Password match
+                
                 res.json({
                   status: "SUCCESS",
                   message: "Signin successful",
@@ -132,5 +151,10 @@ router.post("/Signin", (req, res) => {
       });
   }
 });
+
+router.get('/getTasks', (req,res) => {
+  
+})
+
 
 module.exports = router;
